@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>day2</title>
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+<div ng-app="myApp" ng-controller="myCtrl">
+    名: <input type="text" ng-model="lastName">
+    姓: <input type="text" ng-model="firstName">
+    <p>名字{{ firstName + " " +lastName }}</p>
+</div>
+</body>
+<script>
+    var app = angular.module('myApp',[]);
+    app.controller('myCtrl',function ($scope) {
+        $scope.firstName = "zhai";
+        $scope.lastName = "jiayu";
+    })
+</script>
+</html>

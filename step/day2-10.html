@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>service</title>
+</head>
+<body>
+<div ng-app="myApp" ng-controller="myCtrl">
+    请输入化为二进制的数: <input type="text" ng-model="number">
+    {{ number }}
+    {{ func(number) }}
+</div>
+<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+<script>
+    var app =angular.module('myApp',[]);
+        app.service('sort',function () {
+            this.myFunc = function (x) {
+                return x+1;
+            }
+        });
+        app.controller('myCtrl',function ($scope,sort) {
+            $scope.number = 100;
+            $scope.func = sort.myFunc;
+        })
+</script>
+</body>
+</html>

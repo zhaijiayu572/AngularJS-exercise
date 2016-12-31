@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>day2-9</title>
+</head>
+<body>
+<!--<div ng-app="myApp" ng-controller="myCtrl">-->
+    <!--单价:<input type="number" ng-model="price">-->
+    <!--数量: <input type="number" ng-model="quantity">-->
+    <!--<p>总价：{{ (quantity*price)|currency }}</p>-->
+<!--</div>-->
+<div ng-app="myApp" ng-controller="myCtrl">
+    请输入要筛选的内容: <input type="text" ng-model="key">
+    <ul>
+        <li ng-repeat="x in names|filter:key">
+            {{ x.name + ","+ x.country  }}
+        </li>
+    </ul>
+</div>
+<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+<script>
+//    angular.module('myApp',[])
+//        .controller('myCtrl',function ($scope) {
+//            $scope.price = 1;
+//            $scope.quantity = 1;
+//        })
+    angular.module('myApp',[])
+        .controller('myCtrl',function ($scope) {
+            $scope.names = [{name:'Kity',country:'Canada'},{name:'Mike',country:'America'}];
+        })
+</script>
+</body>
+</html>

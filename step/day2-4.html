@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>day2-4</title>
+</head>
+<body>
+<!--<div ng-app="" ng-init="person=['Mike','An','Jane']">-->
+    <!--<ul>-->
+        <!--<li ng-repeat="name in person">-->
+            <!--{{ name }}-->
+        <!--</li>-->
+    <!--</ul>-->
+<!--</div>-->
+<div ng-app="" ng-init="person=[
+{name:'Mike',country:'America'},
+{name:'An',country:'Canada'},
+{name:'Jane',country:'China'}]">
+    <ul>
+        <li ng-repeat="x in person">
+            {{ x.name + " "+ x.country }}
+        </li>
+    </ul>
+</div>
+<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>day2-6</title>
+</head>
+<body>
+<div ng-app="myApp" ng-controller="myCtrl">
+    请输入姓名: <input type="text" ng-model="name">
+    <p>姓名:{{ name }}</p>
+</div>
+<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+<script>
+    angular.module('myApp',[])
+        .controller('myCtrl',function ($scope) {
+            $scope.name = "Mike"
+        });
+</script>
+</body>
+</html>

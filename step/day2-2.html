@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>day2-2</title>
+</head>
+<body>
+<div ng-app="" ng-init="person={lastName:'li',firstName:'HeiZi'}">
+    <p>姓名:{{ person.lastName+ " "+ person.firstName }}</p>
+    <p>姓名:<span ng-bind="person.lastName+' '+person.firstName"></span></p>
+</div>
+</body>
+<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</html>
