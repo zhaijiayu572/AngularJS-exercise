@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$http</title>
+</head>
+<body>
+<div ng-app="myApp" ng-controller="myCtrl">
+    <ul>
+        <li ng-repeat="x in names">
+            {{ x.Name + " " + x.Country  }}
+        </li>
+    </ul>
+</div>
+<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+<script>
+//    angular.module('myApp',[])
+//        .controller('myCtrl',function ($scope,$http) {
+//            $http.get("http://www.runoob.com/try/angularjs/data/sites.php")
+//                .success(function (response) {
+//                    $scope.names = response.sites;
+//                })
+//        })
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope, $http) {
+        $http.get("test.php")
+            .success(function (response) {$scope.names = response.sites;});
+    });
+</script>
+</body>
+</html>

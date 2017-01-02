@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular HTML EVENT</title>
+</head>
+<body>
+<div ng-app="myApp" ng-controller="myCtrl">
+    <button ng-click="toggle()">显示/隐藏</button>
+    <p ng-hide="bFlag">
+        名: <input type="text" ng-model="firstName">
+        姓: <input type="text" ng-model="lastName">
+    </p>
+    <p>
+        {{ lastName + " " + firstName }}
+    </p>
+</div>
+<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+<script>
+    angular.module('myApp',[])
+        .controller('myCtrl',function ($scope) {
+            $scope.firstName = 'heiZi';
+            $scope.lastName = 'li';
+            $scope.bFlag = false;
+            $scope.toggle = function () {
+                return $scope.bFlag = !$scope.bFlag;
+            }
+        })
+</script>
+</body>
+</html>
